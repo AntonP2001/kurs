@@ -1,0 +1,35 @@
+﻿<Window x:Class="kurs.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs"
+        mc:Ignorable="d"
+        Title="Регистрация" ResizeMode="NoResize" SizeToContent="Height" Width="800">
+    <StackPanel x:Name="stackPanel">
+        <Label>Фамилия</Label>
+        <TextBox x:Name="tbSurname"></TextBox>
+        <Label>Имя</Label>
+        <TextBox x:Name="tbOtch"></TextBox>
+        <Label>Отчество</Label>
+        <TextBox x:Name="login"></TextBox>
+        <Label>Логин</Label>
+        <TextBox x:Name="tbLogin"></TextBox>
+        <Label>Пароль</Label>
+        <PasswordBox x:Name="tbPas" PasswordChar="*"></PasswordBox>
+        <Label>Подтверждение пароля</Label>
+        <PasswordBox x:Name="tbPas2" PasswordChar="*"></PasswordBox>
+        <Grid x:Name="grid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="txtCaprcha" Background="Gray" FontSize="28" Grid.Row="0"
+                       TextAlignment="Center"></TextBlock>
+            <Line x:Name="line" Grid.Row="0" Stroke="Black"></Line>
+            <TextBox x:Name="tbCaptcha" Grid.Row="1"></TextBox>
+        </Grid>
+        <Button Content="Зарегистрироваться!" IsDefault="True"
+            Click="btn_Registration_Click"></Button>
+    </StackPanel>
+</Window>

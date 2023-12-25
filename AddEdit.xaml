@@ -1,0 +1,83 @@
+﻿<Window x:Class="kurs.AddEdit"
+        x:Name="WindowAddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs"
+        Width="750"
+        Height="700"
+        Loaded="WindowLoaded"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner" 
+    Title="AddEdit">
+    <Grid>
+        <Grid Margin="94,0,56,300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" ></ColumnDefinition>
+                <ColumnDefinition Width="200" ></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Content="Номер"></Label>
+            <TextBox Grid.Row="1" Grid.Column="0" x:Name="tbNum" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Num}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Content="Фамилия"></Label>
+            <TextBox Grid.Row="3" Grid.Column="0" x:Name="tbFamily" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Family}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Имя"></Label>
+            <TextBox Grid.Row="5" Grid.Column="0" x:Name="tbName" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Name}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Отчество"></Label>
+            <TextBox Grid.Row="7" Grid.Column="0" x:Name="tbOtch" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Otch}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Название цеха"></Label>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbCeh" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Title_of_ceh}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Тип изделия"></Label>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbType" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Type}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Цена "></Label>
+            <Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Сделано в понедельник (шт)"></Label>
+            <TextBox Grid.Row="1" Grid.Column="2" x:Name="monday" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Rate2018}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Сделано во вторник (шт)"></Label>
+            <TextBox Grid.Row="3" Grid.Column="2" x:Name="tuesday" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Rate2019}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Сделано в среду (шт)"></Label>
+            <TextBox Grid.Row="5" Grid.Column="2" x:Name="wednesday" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Rate2020}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Сделано в четверг (шт)"></Label>
+            <TextBox Grid.Row="7" Grid.Column="2" x:Name="thursday" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Rate2021}" TextWrapping="Wrap"></TextBox>
+            <Label Grid.Row="8" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Сделано в пятницу (шт)"></Label>
+            <TextBox Grid.Row="9" Grid.Column="2" x:Name="friday" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=Rate2022}" TextWrapping="Wrap"></TextBox>
+            
+        </Grid>
+        <Grid Margin="100,550,100,64">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnAddEdit" VerticalAlignment="Center" Click="btnAddEdit_Click" Background="blue" Foreground="white" FontSize="25" FontWeight="Bold"  Margin="60,0,60,0" Content="Добавить" Height="50"/>
+            <Button Grid.Column="1" VerticalAlignment="Center" Click="btnCancel_Click" Content="Отмена"  Background="blue" Foreground="white" FontSize="25" FontWeight="Bold" Margin="60,0,60,0" Height="50" />
+        </Grid>
+
+        <StackPanel Grid.Column="1">
+            <Image x:Name="imgPhoto" Width="150" Height="150" Margin="0,300,0,20" Stretch="Fill" Source="{Binding Path=PhotoFull}"></Image>
+            <Button Width="194" Click="btn_AddPhoto_Click" Content="Добавить фото" Height="50" FontSize="20" Background="blue" Foreground="white" FontWeight="Bold"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
